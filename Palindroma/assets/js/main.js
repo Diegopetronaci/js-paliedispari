@@ -35,26 +35,70 @@
 //
 // }
 
-function cercaPalindrome(str) {
+//esercizio preso da internet e
+// crea un imput
+// const string = prompt('Enter a string: ');
+//   var parolaUtente = prompt('Enter a string: ')
+//
+// // evoca la funzione
+// // const value = cercaPalindrome(string);
+//   var valuta = cercaPalindrome(parolaUtente);
+//
+// // console.log(palindromo("loging"));
+// // console.log(value);
+//   console.log(valuta);
+//
+// function cercaPalindrome(parolaUtente) {
+//
+//     // cerca la lunghezza di una stringa
+//     // const len = string.length;
+//     var lunghezza = parolaUtente.length;
+//
+//     // loop per trovare metà di una stringa
+// //     for (let i = 0; i < len / 2; i++) {
+// //
+// //         // cerca la prima e l ultima lettera
+// //         if (string[i] !== string[len - 1 - i]) {
+// //             return 'It is not a palindrome';
+// //         }
+// //     }
+// //     return 'It is a palindrome';
+// // }
+//       for (let i = 0; i < lunghezza / 2; i++) {
+//
+//           // cerca la prima e l ultima lettera
+//           if (parolaUtente[i] !== parolaUtente[lunghezza - 1 - i]) {
+//               return 'It is not a palindrome';
+//           }
+//         }
+//         return 'It is a palindrome';
+//         }
+//
+//
 
-    // cerca la lunghezza di una stringa
-    const len = string.length;
+//esercizio creato da 0:
 
-    // loop per trovare metà di una stringa
-    for (let i = 0; i < len / 2; i++) {
-
-        // cerca la prima e l ultima lettera
-        if (string[i] !== string[len - 1 - i]) {
-            return 'It is not a palindrome';
-        }
-    }
-    return 'It is a palindrome';
-}
 
 // crea un imput
-const string = prompt('Enter a string: ');
+var parolaUtente = prompt("inserisci una parola palindroma");
 
-// chiama la funzione
-const value = cercaPalindrome(string);
+// evoca la funzione
+var cerca = cercaPalindrome(parolaUtente);
+console.log(cerca);
 
-console.log(value);
+// crea la funzione
+function cercaPalindrome(parolaUtente) {
+
+    // cerca la lunghezza di una stringa
+    var lunghezzaStringa = parolaUtente.length
+
+    // loop per trovare metà di una stringa
+    for (var i = 0; i < lunghezzaStringa/2 ; i++) {
+
+    // cerca la prima e l ultima lettera
+      if (parolaUtente[i] !== parolaUtente[lunghezzaStringa - 1 - i]) {
+        return "la parola non è palindroma";
+      }
+    }
+    return "la parola è palindroma";
+}
