@@ -76,7 +76,7 @@
 //
 //
 
-//esercizio creato da 0 ma con base di internet:
+// esercizio creato da 0 ma con base di internet:
 
 
 // crea un imput

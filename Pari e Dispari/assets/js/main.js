@@ -19,7 +19,7 @@ console.log(numeroUtente);
 // crea una funzione
 
 function generaNumeroRandom(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 var generaNumero = generaNumeroRandom(1, 5);
@@ -31,26 +31,44 @@ function sommatore(num1, num2) {
   return somma = num1 + num2;
 }
 
-// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-function controlloNumero(number) {
-  if(number % 2 === 0){
-    return true;
-  }
-}
-
 var somma = sommatore(numeroUtente, generaNumero)
 console.log(somma);
 
-//controlloNumero(somma)
-if (controlloNumero(somma)) {
-  console.log("pari");
-} else {
-  console.log("dispari");
+// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+function controlloNumero(number) {
+  if(number % 2 === 0){
+    return "pari";
+  }
+  return "dispari";
 }
 
+var numeroControllato = controlloNumero(somma)
+
 // Dichiariamo chi ha vinto.
-if (pariDispari == controlloNumero(somma)) {
+if (pariDispari === numeroControllato) {
   alert("YOU WIN !!!!");
 } else {
   alert("YOU LOSE !!!!");
 }
+
+// // finale corretto
+// // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+// var somma = sommatore(numeroUtente, generaNumero)
+// console.log(somma);
+//
+// function controlloNumero(number) {
+//   if(number % 2 === 0){
+//     return "pari";
+//   }
+//   return "dispari";
+//
+// }
+//
+// var risultato = controlloNumero(somma);
+// console.log(risultato);
+//
+// if (risultato === pariDispari) {
+//   alert("YOU WIN !!!!");
+// } else {
+//   alert("YOU LOSE !!!!");
+// }
